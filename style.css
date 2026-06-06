@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #f0f0f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Decorative blobs */
+.bg-blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  z-index: 0;
+  animation: float 8s ease-in-out infinite alternate;
+}
+
+.b1 {
+  width: 500px;
+  height: 500px;
+  background: #a78bfa;
+  top: -100px;
+  left: -150px;
+}
+
+.b2 {
+  width: 400px;
+  height: 400px;
+  background: #60a5fa;
+  bottom: -100px;
+  right: -100px;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  from { transform: translateY(0px) scale(1); }
+  to   { transform: translateY(30px) scale(1.05); }
+}
+
+/* Card */
+.card {
+  position: relative;
+  z-index: 1;
+  background: white;
+  border-radius: 28px;
+  padding: 52px 44px 44px;
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.10);
+  animation: fadeUp 0.7s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Avatar */
+.avatar-wrap {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #a78bfa, #60a5fa);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+}
+
+/* Heading */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #111;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.accent {
+  color: #7c3aed;
+}
+
+/* Text */
+.intro {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.sub {
+  font-size: 0.9rem;
+  color: #999;
+  font-style: italic;
+  margin-bottom: 32px;
+  letter-spacing: 0.02em;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  padding: 14px 40px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
